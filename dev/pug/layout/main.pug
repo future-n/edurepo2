@@ -1,0 +1,36 @@
+include ../mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+
+		link(rel="stylesheet" type='text/css' href="static/css/main.css")
+
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+	body(class=pageClass)
+		.wrapper
+			include ../modules/header
+			.content
+				block content
+				div.a_615
+					+box_title('About me')
+					+box_text("Hi, I'm Denis – UX/UI designer from Minsk.")
+					+box_text("I'm interested in design and everything connected with it.")
+					+box_text("I'm studying at courses 'Web and mobile design interfaces' in IT-Academy.")
+					+box_text("Ready to implement excellent projects with wonderful people.")
+ 
+			include ../modules/footer
+		script(src="static/js/jquery.js")
+		script(src="static/js/libs.min.js")
+		script(src="static/js/main.js")
+		block script
